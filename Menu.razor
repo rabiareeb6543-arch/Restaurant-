@@ -1,0 +1,90 @@
+@page "/delishdine"
+
+<div class="header">
+    <h1>Delish Dine Restaurant</h1>
+    <h3>Taste that touches your heart"</h3>
+    <hr>
+    <p class="intro">
+        Welcome to <b>Delish Dine</b> - where every meal is crafted with <i>love</i>, <u>flavor</u>, and <big>freshness</big>.
+    </p>
+    <p>
+        We serve <small>happiness</small> in every bite!
+    </p>
+</div>
+
+<div class="menu">
+    <h2><u>Our Menu</u></h2>
+    <table>
+        <tr>
+            <th>Dish Name</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Chicken Alfredo Pasta</td>
+            <td>Main</td>
+            <td>Rs. 850</td>
+        </tr>
+        <tr>
+            <td>Caesar Salad</td>
+            <td>Starter</td>
+            <td>Rs. 450</td>
+        </tr>
+        <tr>
+            <td>Grilled Fish</td>
+            <td>Main</td>
+            <td>Rs. 950</td>
+        </tr>
+        <tr>
+            <td>Chocolate Lava Cake</td>
+            <td>Dessert</td>
+            <td>Rs. 550</td>
+        </tr>
+        <tr>
+            <td>French Fries</td>
+            <td>Starter</td>
+            <td>Rs. 300</td>
+        </tr>
+    </table>
+</div>
+
+<div class="offers">
+    <h3>Our Special Offers</h3>
+    <ul>
+        <li>Buy One Get One Free on Weekends</li>
+        <li>Free Dessert with Family Combo</li>
+        <li>20% Discount for Students</li>
+        <li>Home Delivery Available</li>
+    </ul>
+</div>
+
+<div class="contact">
+    <h3>Contact Us</h3>
+    <form @onsubmit="HandleSubmit">
+        <label>Name:</label><br>
+        <input type="text" placeholder="Enter your name" @bind-value="Name"/><br>
+        <label>Email:</label><br>
+        <input type="email" placeholder="Enter your email" @bind-value="Email"/><br>
+        <label>Message:</label><br>
+        <textarea placeholder="Your message here..." @bind-value="Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+@code {
+    private string Name { get; set; } = string.Empty;
+    private string Email { get; set; } = string.Empty;
+    private string Message { get; set; } = string.Empty;
+
+    private void HandleSubmit()
+    {
+        // In a real Blazor project, you would handle the form submission here.
+        // E.g., sending data to a server or performing validation.
+        Console.WriteLine($"Form Submitted by {Name} ({Email}): {Message}");
+
+        // Optionally clear the form
+        // Name = string.Empty;
+        // Email = string.Empty;
+        // Message = string.Empty;
+    }
+}
