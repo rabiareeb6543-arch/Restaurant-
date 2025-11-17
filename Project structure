@@ -1,0 +1,21 @@
+restaurant-management/
+  backend/
+    server.js
+    db.js
+    schema.sql
+    auth.js
+    middleware/
+      validate.js
+    routes/
+      menu.js
+      orders.js
+      reservations.js
+      contact.js
+      auth.js
+    package.json
+    .env.example
+  frontend/
+    index.html
+    styles.css
+    script.js
+  README.md
